@@ -10,7 +10,7 @@ replication_specs = [
         electable_specs = [
           {
             instance_size = "M30"
-            node_count    = 3
+            node_count    = 1
           }
         ]
         read_only_specs = [
@@ -48,22 +48,7 @@ replication_specs = [
             node_count    = 2
           }
         ]
-        read_only_specs = [{
-          instance_size = "M30"
-          node_count    = 1
-        }]
-        analytics_specs = [{
-          instance_size = "M30"
-          node_count    = 1
-        }]
         auto_scaling = [{
-          compute_enabled            = true
-          compute_max_instance_size  = "M50"
-          compute_min_instance_size  = "M30"
-          compute_scale_down_enabled = true
-          disk_gb_enabled            = true
-        }]
-        analytics_auto_scaling = [{
           compute_enabled            = true
           compute_max_instance_size  = "M50"
           compute_min_instance_size  = "M30"
